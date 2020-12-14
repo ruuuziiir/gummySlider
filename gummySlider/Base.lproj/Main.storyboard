@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gummySlider" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="截圖 2020-12-14 下午8.22.00" translatesAutoresizingMaskIntoConstraints="NO" id="x2B-m5-Q4Z">
+                                <rect key="frame" x="50" y="104" width="314" height="392"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="23J-zi-iS6">
+                                <rect key="frame" x="73" y="531" width="268" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                <color key="maximumTrackTintColor" systemColor="opaqueSeparatorColor"/>
+                                <connections>
+                                    <action selector="colorSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="j4q-0b-xcY"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LLe-8d-wNp">
+                                <rect key="frame" x="73" y="581" width="268" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                <color key="maximumTrackTintColor" systemColor="opaqueSeparatorColor"/>
+                                <connections>
+                                    <action selector="colorSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="fQ2-hd-9Uk"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="daq-ch-xar">
+                                <rect key="frame" x="73" y="631" width="268" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemTealColor"/>
+                                <color key="maximumTrackTintColor" systemColor="opaqueSeparatorColor"/>
+                                <connections>
+                                    <action selector="colorSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="YsQ-WL-bNv"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="86R-2i-lkM">
+                                <rect key="frame" x="73" y="681" width="268" height="31"/>
+                                <color key="maximumTrackTintColor" systemColor="opaqueSeparatorColor"/>
+                                <connections>
+                                    <action selector="colorSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Exn-tc-PZP"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYv-aY-l8L">
+                                <rect key="frame" x="169" y="731" width="76" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Random!">
+                                    <color key="titleColor" systemColor="opaqueSeparatorColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Qg-RQ-KEB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐻GummyBear🐻" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLR-fL-MqO">
+                                <rect key="frame" x="82" y="54" width="250.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.054892867800000002" green="0.05490776151" blue="0.054889596999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LLe-8d-wNp" firstAttribute="top" secondItem="23J-zi-iS6" secondAttribute="bottom" constant="20" id="02s-Xa-CmV"/>
+                            <constraint firstItem="OYv-aY-l8L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Jl-Tu-uDX"/>
+                            <constraint firstItem="86R-2i-lkM" firstAttribute="top" secondItem="daq-ch-xar" secondAttribute="bottom" constant="20" id="8zl-o9-oEv"/>
+                            <constraint firstItem="23J-zi-iS6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="H07-Ia-foB"/>
+                            <constraint firstAttribute="trailing" secondItem="LLe-8d-wNp" secondAttribute="trailing" constant="75" id="Jrj-pX-pXz"/>
+                            <constraint firstAttribute="trailing" secondItem="x2B-m5-Q4Z" secondAttribute="trailing" constant="50" id="LI2-Po-ibc"/>
+                            <constraint firstItem="LLe-8d-wNp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="LMl-HL-BAq"/>
+                            <constraint firstAttribute="bottom" secondItem="x2B-m5-Q4Z" secondAttribute="bottom" constant="400" id="QlH-D4-bVN"/>
+                            <constraint firstItem="x2B-m5-Q4Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Tvt-8o-5ql"/>
+                            <constraint firstAttribute="trailing" secondItem="86R-2i-lkM" secondAttribute="trailing" constant="75" id="YRF-T9-Jeg"/>
+                            <constraint firstItem="86R-2i-lkM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="b4H-yh-ZKL"/>
+                            <constraint firstAttribute="trailing" secondItem="23J-zi-iS6" secondAttribute="trailing" constant="75" id="bkI-og-1sp"/>
+                            <constraint firstItem="23J-zi-iS6" firstAttribute="top" secondItem="x2B-m5-Q4Z" secondAttribute="bottom" constant="35" id="dWp-H4-rEF"/>
+                            <constraint firstItem="PLR-fL-MqO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="dtf-VE-W6M"/>
+                            <constraint firstAttribute="trailing" secondItem="daq-ch-xar" secondAttribute="trailing" constant="75" id="hGf-k2-M8q"/>
+                            <constraint firstItem="PLR-fL-MqO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSP-1j-BsZ"/>
+                            <constraint firstItem="OYv-aY-l8L" firstAttribute="top" secondItem="86R-2i-lkM" secondAttribute="bottom" constant="20" id="m0U-BC-dFn"/>
+                            <constraint firstItem="daq-ch-xar" firstAttribute="top" secondItem="LLe-8d-wNp" secondAttribute="bottom" constant="20" id="op2-NU-PN6"/>
+                            <constraint firstItem="daq-ch-xar" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="v8N-Xl-3j4"/>
+                            <constraint firstItem="x2B-m5-Q4Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="yn9-oT-ksr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alphaSlider" destination="86R-2i-lkM" id="sB2-t4-So9"/>
+                        <outlet property="blueSlider" destination="daq-ch-xar" id="JqK-or-Ycw"/>
+                        <outlet property="greenSlider" destination="LLe-8d-wNp" id="Le6-7l-Ebv"/>
+                        <outlet property="gummyBear" destination="x2B-m5-Q4Z" id="FcR-nJ-fUZ"/>
+                        <outlet property="redSlider" destination="23J-zi-iS6" id="4Sc-oY-2Do"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="截圖 2020-12-14 下午8.22.00" width="675" height="1075"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
